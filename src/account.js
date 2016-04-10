@@ -1,6 +1,6 @@
-var Income = require("income.js");
-var Expense = require("expense.js");
-var Money = require("money.js");
+var Income = require("./income.js");
+var Expense = require("./expense.js");
+var Money = require("./money.js");
 
 function Account(startBalance) {
     function ConvertToUsd(money) {
