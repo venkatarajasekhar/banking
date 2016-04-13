@@ -2,10 +2,10 @@
  * Created by oksanatunik on 13.04.2016.
  */
 var Money = require('../src/money.js');
-var PlannedIncome = require('../src/planned_income');
+var PlannedIncome = require('../src/planned_income.js');
 
 describe('PlannedIncome', function () {
-    describe('contructor', function () {
+    describe('constructor', function () {
         it('sets plannedDate', function () {
             var income = new PlannedIncome(new Money(60, 'pln'), 'salary', '2017/08/23');
 

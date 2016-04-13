@@ -1,9 +1,8 @@
-function Income(amount, date, details) {
-    return {
-        amount: amount,
-        details: details,
-        date: date
-    };
+var Transaction = require('../src/transaction');
+
+function Income(amount, details, date) {
+    var transaction = new Transaction(amount, details, date);
+    return transaction;
 }
 
 module.exports = Income;

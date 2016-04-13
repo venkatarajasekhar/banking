@@ -1,8 +1,5 @@
-module.exports = function (amount, description, plannedDate) {
-    return{
-        amount: amount,
-        description: description,
-        plannedDate: plannedDate,
-        date: null
-    }
+var PlannedTransaction = require('../src/planned_transaction');
+
+module.exports = function (amount, details, plannedDate) {
+    return new PlannedTransaction(amount, details, plannedDate);
 };
