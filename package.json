@@ -4,11 +4,16 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "closure-compiler": "node ./node_modules/closurecompiler/bin/ccjs src/*.js --compilation_level=ADVANCED_OPTIMIZATIONS > closure-compiler-out.js",
+    "eslint": "node ./node_modules/eslint/bin/eslint.js eslint src/*.js"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "closurecompiler": "^1.5.2",
+    "eslint": "^2.8.0",
+    "eslint-config-google": "^0.5.0",
     "jasmine": "^2.4.1"
   }
 }
