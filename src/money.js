@@ -12,3 +12,4 @@ function Money(value, currencyCode) {
 }
 
 module.exports = Money;
+

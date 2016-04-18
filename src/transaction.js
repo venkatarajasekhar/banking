@@ -13,7 +13,7 @@ function Transaction(amount, details, date) {
         amount: amount,
         details: details,
         date: date
-    }
+    };
 }
 
 module.exports = Transaction;

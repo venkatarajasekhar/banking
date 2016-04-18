@@ -18,3 +18,4 @@ function Expense(amount, date, details) {
 }
 
 module.exports = Expense;
+
