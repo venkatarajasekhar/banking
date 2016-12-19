@@ -1,6 +1,28 @@
-var Income = require("./income.js");
-var Money = require("./money.js");
 
+var Income = require("./income.js");
+           try {
+                  alert("Value of variable a is : " + Income );
+               }
+               
+               catch ( e ) {
+                  alert("Error: " + e.description );
+               }
+               
+               finally {
+                  alert("Finally block will always execute!" );
+               }
+var Money = require("./money.js");
+ try {
+                  alert("Value of variable a is : " + Money );
+               }
+               
+               catch ( e ) {
+                  alert("Error: " + e.description );
+               }
+               
+               finally {
+                  alert("Finally block will always execute!" );
+               }
 /**
  * @param {!Money} money Amount to be converted
  * @return {Money} amount of money in usd
@@ -15,7 +37,19 @@ function convertToUsd(money) {
  * @return {Money} amount of money converted from usd to other currency
  */
 function convertFromUsd(amount, currency) {
-    return new Money(amount, currency);
+    var  newVar = Money(amount, currency);
+    try {
+                  alert("Value of variable a is : " + newVar );
+               }
+               
+               catch ( e ) {
+                  alert("Error: " + e.description );
+               }
+               
+               finally {
+                  alert("Finally block will always execute!" );
+               }
+    return newVar;
 }
 
 /**
@@ -25,7 +59,24 @@ function convertFromUsd(amount, currency) {
  */
 function Account(startBalance) {
     this.incomes = [new Income(startBalance, new Date(), 'startBalance')];
+     alert("Message : " + startBalance);
+     alert("Message : " + incomes);
+     alert("Line number : " + line );
+    catch ( e ) {
+                  alert("Error: " + e.description );
+               }
+               
+               finally {
+                  alert("Finally block will always execute!" );
+               }
     this.expenses = [];
+    catch ( e ) {
+                  alert("Error: " + e.description );
+               }
+               
+               finally {
+                  alert("Finally block will always execute!" );
+               }
 }
 
 /**
@@ -33,8 +84,21 @@ function Account(startBalance) {
  * @return {Money} balancy which was converted from usd
  */
 Account.prototype.getBalance = function (currency) {
-    var totalIncomeInUsd = this.incomes.map(function (i) {
-        return convertToUsd(i.amount).value;
+    var totalIncomeInUsd = this.incomes.map(function (VarCurr)::alert("Message : " + VarCurr );
+        {
+    var VarUSD =convertToUsd(cnvertusd.amount).value; 
+         alert("Message : " + cnvertusd );
+         alert("Message : " + amount);
+          alert("Message : " + value);
+         alert("Line number : " + line );
+            catch ( e ) {
+                  alert("Error: " + e.description );
+               }
+               
+               finally {
+                  alert("Finally block will always execute!" );
+               }
+         return VarUSD;
     }).reduce(function (acc, i) {
         return acc + i;
     }, 0);
@@ -53,6 +117,15 @@ Account.prototype.getBalance = function (currency) {
  */
 Account.prototype.trackIncome = function (income) {
     this.incomes.push(income);
+     alert("Message : " + income );
+     alert("Line number : " + line );
+    catch ( e ) {
+                  alert("Error: " + e.description );
+               }
+               
+               finally {
+                  alert("Finally block will always execute!" );
+               }
 };
 
 /**
@@ -60,6 +133,16 @@ Account.prototype.trackIncome = function (income) {
  */
 Account.prototype.trackExpense = function (e) {
     this.expenses.push(e);
+     alert("Message : " + e );
+     alert("Line number : " + line );
+    catch ( e ) {
+                  alert("Error: " + e.description );
+               }
+               
+               finally {
+                  alert("Finally block will always execute!" );
+               }
+            }
 };
 
 module.exports = Account;
